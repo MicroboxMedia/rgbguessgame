@@ -1,6 +1,5 @@
 import random
 import tkinter as tk
-from turtle import color
 
 window = tk.Tk()
 font_tuple_large = ("Fugaz One Regular", 20, "bold")
@@ -20,26 +19,23 @@ colorbackground = tk.Label(
     height=10
 )
 
-label_red = tk.Label(text="R")
-entry_red = tk.Entry()
-
-label_green = tk.Label(text="G")
-entry_green = tk.Entry()
-
-label_blue = tk.Label(text="B")
-entry_blue = tk.Entry()
-
 title.configure(font=font_tuple_large)
-label_red.configure(font=font_tuple_small)
-label_green.configure(font=font_tuple_small)
-label_blue.configure(font=font_tuple_small)
 
 title.pack()
 colorbackground.pack()
-label_red.pack()
-entry_red.pack()
-label_green.pack()
-entry_green.pack()
-label_blue.pack()
-entry_blue.pack()
+
+print("What is the RGB Value (R,G,B)")
+rgb_string = str(input())
+
+rgb_list = rgb_string.split(",")
+red_score = 255 - abs(red_value - int(rgb_list[0]))
+blue_score = 255 - abs(blue_value - int(rgb_list[1]))
+green_score = 255 - abs(red_value - int(rgb_list[2]))
+
+total_score = red_score + green_score + blue_score
+
+print("Your score is ", total_score, "Highest Possible Score 765")
+
+
+
 window.mainloop()
