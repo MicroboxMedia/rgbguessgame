@@ -1,4 +1,5 @@
 import random
+import time
 import tkinter as tk
 
 window = tk.Tk()
@@ -35,7 +36,9 @@ green_score = 255 - abs(red_value - int(rgb_list[2]))
 total_score = red_score + green_score + blue_score
 
 print("Your score is ", total_score, "Highest Possible Score 765")
+time.sleep(6000)
 
+exit()
 
 
 window.mainloop()
