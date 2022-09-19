@@ -28,6 +28,8 @@ colorbackground.pack()
 print("What is the RGB Value (R,G,B)")
 rgb_string = str(input())
 
+window.mainloop()
+
 rgb_list = rgb_string.split(",")
 red_score = 255 - abs(red_value - int(rgb_list[0]))
 blue_score = 255 - abs(blue_value - int(rgb_list[1]))
@@ -36,9 +38,9 @@ green_score = 255 - abs(red_value - int(rgb_list[2]))
 total_score = red_score + green_score + blue_score
 
 print("Your score is ", total_score, "Highest Possible Score 765")
-time.sleep(6000)
+
+time.sleep(600)
 
 exit()
 
 
-window.mainloop()
